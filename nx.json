@@ -29,6 +29,9 @@
     "starter-web-e2e": {
       "tags": [],
       "implicitDependencies": ["starter-web"]
+    },
+    "shared-ui-layouts": {
+      "tags": ["scope:shared", "type:ui"]
     }
   }
 }

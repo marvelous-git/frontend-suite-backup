@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@frontend-suite/shared/ui-layouts": [
+        "libs/shared/ui-layouts/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

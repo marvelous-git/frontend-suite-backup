@@ -122,6 +122,36 @@
           }
         }
       }
+    },
+    "shared-ui-layouts": {
+      "projectType": "library",
+      "root": "libs/shared/ui-layouts",
+      "sourceRoot": "libs/shared/ui-layouts/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-layouts/tsconfig.lib.json",
+              "libs/shared/ui-layouts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-layouts/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/ui-layouts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
