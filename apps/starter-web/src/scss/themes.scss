@@ -1,0 +1,39 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+
+$nb-themes: nb-register-theme((
+
+  // add your variables here like:
+
+  // color-primary-100: #f2f6ff,
+  // color-primary-200: #d9e4ff,
+  // color-primary-300: #a6c1ff,
+  // color-primary-400: #598bff,
+  // color-primary-500: #3366ff,
+  // color-primary-600: #274bdb,
+  // color-primary-700: #1a34b8,
+  // color-primary-800: #102694,
+  // color-primary-900: #091c7a,
+  //menu-item-active-text-color: green, #4c566a;
+  // menu-item-active-background-color: #5e81ac,
+  // menu-item-icon-active-color: #fff,//#4c566a,
+  // // menu-item-border-radius: 6px,14px;
+  // menu-item-active-text-color: #fff,
+  // menu-item-hover-background-color:  #5e81ac,
+  // menu-item-hover-text-color: #fff,
+  // menu-text-font-size: 14px,
+  // menu-text-font-weight: 400,
+  // menu-submenu-item-active-text-color: #4c566a,
+  // menu-submenu-item-icon-active-color: #4c566a,
+  // menu-submenu-item-active-background-color: #e8e8e8,
+  // menu-submenu-background-color: #f4f4f4,
+  // menu-submenu-item-hover-text-color: #4c566a,
+  // menu-submenu-item-icon-hover-color: #4c566a,
+  // menu-submenu-item-hover-background-color:  #e8e8e8,
+  // menu-submenu-margin: 0px,
+  // menu-submenu-padding: 0px,
+  // card-header-info-background-color: #5e81ac,
+
+
+), default, default);
+

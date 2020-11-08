@@ -1,0 +1,39 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <div id="wrapper">
+        <div [class.close]="isClosed" class="main-item menu">
+          <span class="line line01"></span>
+          <span class="line line02"></span>
+          <span class="line line03"></span>
+        </div>
+      </div>
+    </a>
+    <a class="app-name" href="#" (click)="navigateHome()"><span *ngIf="configuration.applicationName">
+      {{ configuration.applicationName }}
+    </span></a>
+  </div>
+</div>
+
+<div class="brand-container">
+  <div class="logo-container">
+    <a class="logo" href="#" (click)="navigateHome()">
+      <img
+      style="height: 35px;"
+      [src]="'./assets/brand/logo.svg'"
+    /></a>
+  </div>
+</div>
+
+<div class="header-container">
+  <nb-actions size="small">
+
+    <nb-action class="user-action">
+      <nb-user [nbContextMenu]="userMenu"
+               [onlyPicture]="userPictureOnly"
+               [name]="user.firstName + ' ' + user.lastName"
+               [picture]="user?.picture ? user.picture : './assets/avatars/user.svg'">
+      </nb-user>
+    </nb-action>
+  </nb-actions>
+</div>

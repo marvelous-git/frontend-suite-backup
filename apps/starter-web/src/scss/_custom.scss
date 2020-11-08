@@ -1,0 +1,23 @@
+.badge {
+  padding: 5px 8px;
+  line-height: 12px;
+  border: 1px solid;
+  font-weight: 400;
+  font-size: 13px;
+}
+.page-item.active .page-link {
+  background-color: #5e81ac;
+  border-color: #5e81ac;
+}
+
+label.p-radiobutton-label {
+  margin-bottom: 0rem;
+}
+legend {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  font-size: 0.9375rem;
+  line-height: inherit;
+}
+

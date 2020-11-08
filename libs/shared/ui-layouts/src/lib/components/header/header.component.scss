@@ -1,0 +1,140 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '../../styles/themes';
+
+@include nb-install-component() {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
+  }
+
+  nb-action {
+    height: auto;
+    display: flex;
+    align-content: center;
+  }
+
+  nb-user {
+    cursor: pointer;
+  }
+
+  ::ng-deep nb-search button {
+    padding: 0!important;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    .sidebar-toggle {
+      @include nb-ltr(padding-right, 1.25rem);
+      @include nb-rtl(padding-left, 1.25rem);
+      text-decoration: none;
+      color: nb-theme(text-hint-color);
+      #wrapper {
+        display:inline-block;
+        border-radius:500px;
+        position: relative;
+        cursor:pointer;
+      }
+      .main-item {
+        width:25px;
+        height:25px;
+        position:relative;
+
+        .line {
+          position: absolute;
+          height: 4px;
+          width:100%;
+          background:#8F9BB3;
+          border-radius:10px;
+          transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+        }
+
+        .line01 {
+          top:19%;
+        }
+
+        .line02 {
+          top:49%;
+        }
+
+        .line03 {
+          top:79%;
+        }
+      }
+      .menu.close .line01 {
+        transform:rotate(45deg);
+        top:49%;
+      }
+
+      .menu.close .line02, .menu.close .line03 {
+        transform:rotate(-45deg);
+        top:49%;
+      }
+    }
+
+    .app-name {
+      padding: 0 1.25rem;
+      font-size: 1rem;
+      @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
+      @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  }
+
+  .brand-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    .sidebar-toggle {
+      @include nb-ltr(padding-right, 1.25rem);
+      @include nb-rtl(padding-left, 1.25rem);
+      text-decoration: none;
+      color: nb-theme(text-hint-color);
+      nb-icon {
+        font-size: 1.75rem;
+      }
+    }
+
+    .logo {
+      padding: 0 1.25rem;
+      margin-left: 1.25;
+      font-size: 1.75rem;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    .brand-container {
+      display: none;
+    }
+    .user-action {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  @include media-breakpoint-down(is) {
+    nb-select {
+      display: none;
+    }
+    .header-container {
+      .app-name {
+        display: none;
+       }
+    }
+  }
+
+}
+

@@ -11,6 +11,44 @@ Run `nx generate @nrwl/angular:application --name=starter-web --style=scss --rou
 
 When using Nx, you can create multiple applications and libraries in the same workspace.
 
+## Changing Nebular theme
+
+Nebular comes with 4 visual themes right out of the box. The themes currently available are: 
+1. default
+1. corporate
+1. cosmic & 
+1. dark
+
+This project makes it easier to switch between different themes. There are two places you need to edit to change/enable a theme. First you need set the theme name in the `environment.ts` file and then add the appropriate styling in the `workspace.json` file.
+
+### Example
+
+> In the `environment.ts` file, set the theme to dark to enable the dark theme.
+
+```
+import { baseEnvironment } from './base.environment';
+
+export const environment = {
+  ...baseEnvironment,
+  production: false,
+  nebular: {
+    theme: 'default',
+    ...
+  },
+};
+```
+
+> In the `workspace.json` file, add your css styling.
+
+```
+"styles": [
+  "node_modules/@nebular/theme/styles/prebuilt/dark.css",
+  ...
+],
+```
+
+Note that themes are configured per application.
+
 ## Generate a library
 
 Run `nx g @nrwl/react:lib my-lib` to generate a library.

@@ -1,0 +1,42 @@
+@import './themes';
+
+@mixin nb-overrides() {
+  .menu-sidebar.left {
+    nb-menu {
+      ul.menu-items {
+        margin: 5px;
+      }
+      .menu-item {
+        a {
+          border-radius: 6px 6px 0 0;
+        }
+    }
+
+    .menu-item > .menu-items {
+      border-radius: 6px;
+    }
+
+  }
+  }
+  .menu-sidebar.left.compacted {
+  nb-menu {
+    ul.menu-items {
+      margin: 0px;
+    }
+}
+}
+
+ul.pagination {
+  a {
+    color: #5e81ac;
+    text-decoration: none;
+  }
+
+}
+}
+//border-radius: 6px;
+// .menu-item > .menu-items {
+//   background-color: nb-theme(menu-submenu-background-color);
+//   margin: nb-theme(menu-submenu-margin);
+//   padding: nb-theme(menu-submenu-padding);
+// }

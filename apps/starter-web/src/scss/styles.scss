@@ -1,0 +1,22 @@
+@import 'variables';
+
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+@import 'overrides';
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-overrides();
+}
+
+// @import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+// @import '~@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+// @import '~@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+// @import '~@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+// @import '~angular2-toaster/src/toaster';
+// @import '~ngx-smart-modal/ngx-smart-modal';
+// @import '~@sweetalert2/theme-bootstrap-4/bootstrap-4.scss';
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+@import 'custom';
+
