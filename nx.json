@@ -22,5 +22,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "starter-web": {
+      "tags": ["scope:shared", "platform:web", "type:app"]
+    },
+    "starter-web-e2e": {
+      "tags": [],
+      "implicitDependencies": ["starter-web"]
+    }
+  }
 }
