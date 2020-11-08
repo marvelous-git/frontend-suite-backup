@@ -32,6 +32,12 @@
     },
     "shared-ui-layouts": {
       "tags": ["scope:shared", "type:ui"]
+    },
+    "starter-web-dashboard-dashboard-feature-shell": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "starter-web-dashboard-dashboard-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
     }
   }
 }

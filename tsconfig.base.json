@@ -18,6 +18,12 @@
     "paths": {
       "@frontend-suite/shared/ui-layouts": [
         "libs/shared/ui-layouts/src/index.ts"
+      ],
+      "@frontend-suite/starter-web/dashboard/dashboard-feature-shell": [
+        "libs/starter-web/dashboard/dashboard-feature-shell/src/index.ts"
+      ],
+      "@frontend-suite/starter-web/dashboard/dashboard-data-access": [
+        "libs/starter-web/dashboard/dashboard-data-access/src/index.ts"
       ]
     }
   },

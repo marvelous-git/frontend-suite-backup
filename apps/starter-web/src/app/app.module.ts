@@ -31,7 +31,6 @@ import {
             import('./pages/pages.module').then((module) => module.PagesModule),
         },
         { path: '**', redirectTo: 'pages' },
-
       ],
       { initialNavigation: 'enabled' }
     ),

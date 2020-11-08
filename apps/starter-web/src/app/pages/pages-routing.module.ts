@@ -7,33 +7,14 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      // {
-      //   path: 'dashboard',
-      //   loadChildren: () =>
-      //     import(
-      //       '@lms/dashboard-feature-shell'
-      //     ).then(module => module.LmsDashboardDashboardFeatureShellModule)
-      // },
-      // {
-      //   path: 'users',
-      //   loadChildren: () =>
-      //     import(
-      //       '@lms/users-feature-shell'
-      //     ).then(module => module.LmsUsersUsersFeatureShellModule)
-      // },
-      // {
-      //   path: 'user-accounts',
-      //   loadChildren: () =>
-      //     import(
-      //       '@lib/lms/user-accounts/user-accounts-feature-shell'
-      //     ).then((module) => module.UserAccountsFeatureShellModule),
-      // },        {
-      //   path: 'user-groups-feature-shell',
-      //   loadChildren: () =>
-      //     import(
-      //       '@lib/lms/user-groups/user-groups-feature-shell'
-      //     ).then((module) => module.UserGroupsFeatureShellModule),
-      // },
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import(
+            '@frontend-suite/starter-web/dashboard/dashboard-feature-shell'
+          ).then((module) => module.DashboardFeatureShellModule),
+      },
+
     ]
   }
 ];

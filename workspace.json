@@ -170,6 +170,72 @@
           "style": "scss"
         }
       }
+    },
+    "starter-web-dashboard-dashboard-feature-shell": {
+      "projectType": "library",
+      "root": "libs/starter-web/dashboard/dashboard-feature-shell",
+      "sourceRoot": "libs/starter-web/dashboard/dashboard-feature-shell/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/starter-web/dashboard/dashboard-feature-shell/tsconfig.lib.json",
+              "libs/starter-web/dashboard/dashboard-feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/starter-web/dashboard/dashboard-feature-shell/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/starter-web/dashboard/dashboard-feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "starter-web-dashboard-dashboard-data-access": {
+      "projectType": "library",
+      "root": "libs/starter-web/dashboard/dashboard-data-access",
+      "sourceRoot": "libs/starter-web/dashboard/dashboard-data-access/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/starter-web/dashboard/dashboard-data-access/tsconfig.lib.json",
+              "libs/starter-web/dashboard/dashboard-data-access/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/starter-web/dashboard/dashboard-data-access/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/starter-web/dashboard/dashboard-data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
