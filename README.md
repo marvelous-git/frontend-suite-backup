@@ -51,19 +51,26 @@ Note that themes are configured per application.
 
 ## Generate a library
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+Run `npm run workspace-schematic feature` and provide the required information as prompted to generate a library.
 
-> You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@frontend-suite/mylib`.
+Libraries are sharable across libraries and applications. They can be imported from `@frontend-suite/`.
 
 ## Development server
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve starter-web` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+>Replace `starter-web` with the name of your application.
 
 ## Code scaffolding
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+This project follows a container presenter design pattern.
+
+### Generating a Smart Component
+Run `nx generate @schematics/angular:component --name=containers/my-component --project=my-app --style=scss` to generate a new smart component.
+
+### Generating a Dumb Component
+Run `nx generate @schematics/angular:component --name=components/my-component --project=my-app --style=scss` to generate a new presentational component.
 
 ## Build
 
