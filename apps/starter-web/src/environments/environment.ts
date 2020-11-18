@@ -6,6 +6,8 @@ export const environment = {
   production: false,
   nebular: {
     theme: 'default',
+    logoName: 'logo.svg',
+    logoHeight: '35px',
     userPictureOnly: false,
     userMenus: [{ title: 'Profile' }, { title: 'Log out' }],
   },

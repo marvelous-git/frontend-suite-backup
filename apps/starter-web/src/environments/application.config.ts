@@ -1,3 +1,3 @@
 export const application = {
-  name: `Starter Application`,
+  name: `STARTER APPLICATION`,
 };

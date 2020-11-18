@@ -10,6 +10,8 @@ export interface LayoutConfiguration {
     userPictureOnly: boolean;
     userMenus: UserMenu[];
     theme: string;
+    logoName: string;
+    logoHeight: string;
   };
 }
 

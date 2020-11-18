@@ -9,9 +9,11 @@
         </div>
       </div>
     </a>
-    <a class="app-name" href="#" (click)="navigateHome()"><span *ngIf="configuration.applicationName">
+    <strong>
+      <a class="app-name" href="#" (click)="navigateHome()"><span *ngIf="configuration.applicationName">
       {{ configuration.applicationName }}
-    </span></a>
+     </span></a>
+    </strong>
   </div>
 </div>
 
@@ -19,8 +21,8 @@
   <div class="logo-container">
     <a class="logo" href="#" (click)="navigateHome()">
       <img
-      style="height: 35px;"
-      [src]="'./assets/brand/logo.svg'"
+      [ngStyle]="{'height': configuration.nebular.logoHeight }"
+      [src]="'./assets/brand/' + configuration.nebular.logoName"
     /></a>
   </div>
 </div>
