@@ -27,6 +27,9 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
               "node_modules/socicon/css/socicon.css",
               "node_modules/ionicons/scss/ionicons.scss",
               "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
@@ -227,6 +230,195 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/starter-web/dashboard/dashboard-data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-util-auth": {
+      "projectType": "library",
+      "root": "libs/shared/util-auth",
+      "sourceRoot": "libs/shared/util-auth/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util-auth/tsconfig.lib.json",
+              "libs/shared/util-auth/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util-auth/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util-auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-data-access": {
+      "projectType": "library",
+      "root": "libs/shared/data-access",
+      "sourceRoot": "libs/shared/data-access/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/data-access/tsconfig.lib.json",
+              "libs/shared/data-access/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/data-access/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "shared-util-entities": {
+      "projectType": "library",
+      "root": "libs/shared/util-entities",
+      "sourceRoot": "libs/shared/util-entities/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util-entities/tsconfig.lib.json",
+              "libs/shared/util-entities/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util-entities/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/util-entities/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "starter-web-user-accounts-user-accounts-feature-shell": {
+      "projectType": "library",
+      "root": "libs/starter-web/user-accounts/user-accounts-feature-shell",
+      "sourceRoot": "libs/starter-web/user-accounts/user-accounts-feature-shell/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/starter-web/user-accounts/user-accounts-feature-shell/tsconfig.lib.json",
+              "libs/starter-web/user-accounts/user-accounts-feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/starter-web/user-accounts/user-accounts-feature-shell/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/starter-web/user-accounts/user-accounts-feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "starter-web-user-accounts-user-accounts-data-access": {
+      "projectType": "library",
+      "root": "libs/starter-web/user-accounts/user-accounts-data-access",
+      "sourceRoot": "libs/starter-web/user-accounts/user-accounts-data-access/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/starter-web/user-accounts/user-accounts-data-access/tsconfig.lib.json",
+              "libs/starter-web/user-accounts/user-accounts-data-access/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/starter-web/user-accounts/user-accounts-data-access/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/starter-web/user-accounts/user-accounts-data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "starter-web-user-accounts-auth-feature-shell": {
+      "projectType": "library",
+      "root": "libs/starter-web/user-accounts/auth-feature-shell",
+      "sourceRoot": "libs/starter-web/user-accounts/auth-feature-shell/src",
+      "prefix": "frontend-suite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/starter-web/user-accounts/auth-feature-shell/tsconfig.lib.json",
+              "libs/starter-web/user-accounts/auth-feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/starter-web/user-accounts/auth-feature-shell/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/starter-web/user-accounts/auth-feature-shell/jest.config.js",
             "passWithNoTests": true
           }
         }

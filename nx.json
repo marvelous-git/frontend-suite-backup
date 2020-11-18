@@ -38,6 +38,24 @@
     },
     "starter-web-dashboard-dashboard-data-access": {
       "tags": ["scope:shared", "type:data-access"]
+    },
+    "shared-util-auth": {
+      "tags": ["scope:shared", "type:util"]
+    },
+    "shared-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
+    "shared-util-entities": {
+      "tags": ["scope:shared", "type:util"]
+    },
+    "starter-web-user-accounts-user-accounts-feature-shell": {
+      "tags": ["scope:shared", "type:feature"]
+    },
+    "starter-web-user-accounts-user-accounts-data-access": {
+      "tags": ["scope:shared", "type:data-access"]
+    },
+    "starter-web-user-accounts-auth-feature-shell": {
+      "tags": ["scope:shared", "type:feature"]
     }
   }
 }

@@ -18,3 +18,48 @@ legend {
   line-height: inherit;
 }
 
+.card {
+  border: none;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 0.2rem #bfcdde;
+  border-color: #5E81AC;
+}
+
+.p-field-checkbox, .p-field-radiobutton {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.p-field-radiobutton > label {
+margin-bottom: 0;
+margin-left: .5rem;
+line-height: 1;
+}
+
+
+.p-radiobutton .p-radiobutton-box.p-highlight {
+  border-color: #2E378B;
+  background:#2E378B;
+}
+
+.p-radiobutton .p-radiobutton-box {
+  border: 2px solid #ced4da;
+  background: #ffffff;
+  width: 20px;
+  height: 20px;
+  color: #2E378B;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.p-multiselect, .p-multiselect-close {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.p-multiselect:not(.p-disabled):hover {
+  border-color: #2E378B;
+}

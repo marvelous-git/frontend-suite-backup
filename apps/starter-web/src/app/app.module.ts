@@ -17,6 +17,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { IAuthFacade, UtilAuthModule } from '@frontend-suite/shared/util-auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import {
             import('./pages/pages.module').then((module) => module.PagesModule),
         },
         { path: '**', redirectTo: 'pages' },
+
       ],
       { initialNavigation: 'enabled' }
     ),
@@ -48,8 +50,17 @@ import {
       applicationName: environment.application.name,
       nebular: environment.nebular,
     }),
+    // UtilAuthModule.forRoot({
+    //   jwtStorageKey: environment.jwtStorageKey,
+    //   isNebular: true,
+    // }),
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: IAuthFacade,
+    //   // useClass: UserAccountsFacade
+    // },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

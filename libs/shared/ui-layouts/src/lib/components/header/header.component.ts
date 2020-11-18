@@ -2,12 +2,15 @@ import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 
 import { LayoutService } from '../../utils';
-import { map, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { filter, map, takeUntil } from 'rxjs/operators';
+import { Subject, Observable } from 'rxjs';
 import {
   LAYOUT_CONFIGURATION_TOKEN,
   LayoutConfiguration
 } from '../../tokens';
+import { IAuthFacade } from "@frontend-suite/shared/util-auth";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'frontend-suite-header',
@@ -32,8 +35,33 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
+          //    private userService: IAuthFacade,
               private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
+              private breakpointService: NbMediaBreakpointsService,
+              router: Router
+              ) {
+
+    menuService
+    .onItemClick()
+    .pipe(
+      filter(({ tag }) => tag === 'user-context-menu'),
+      map(({ item: { title } }) => title.toLowerCase())
+    )
+    .subscribe(title => {
+      switch (title) {
+        case 'profile':
+          router.navigate(['/pages']);
+          break;
+        case 'log out':
+          router.navigate(['/pages/dashboard']);
+          break;
+        case 'logout':
+  //        this.userService.logout();
+          break;
+      }
+    });
+
+
   }
 
   ngOnInit() {

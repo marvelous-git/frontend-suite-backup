@@ -14,6 +14,20 @@ const routes: Routes = [
             '@frontend-suite/starter-web/dashboard/dashboard-feature-shell'
           ).then((module) => module.DashboardFeatureShellModule),
       },
+      {
+        path: 'user-accounts',
+        loadChildren: () =>
+          import(
+            '@frontend-suite/starter-web/user-accounts/user-accounts-feature-shell'
+          ).then((module) => module.UserAccountsFeatureShellModule),
+      },
+      {
+        path: 'auth',
+        loadChildren: () =>
+          import(
+            '@frontend-suite/starter-web/user-accounts/auth-feature-shell'
+          ).then((module) => module.AuthFeatureShellModule),
+      },
 
     ]
   }

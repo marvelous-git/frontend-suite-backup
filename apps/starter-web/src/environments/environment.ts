@@ -9,4 +9,5 @@ export const environment = {
     userPictureOnly: false,
     userMenus: [{ title: 'Profile' }, { title: 'Log out' }],
   },
+  jwtStorageKey: 'starter-web-test-jwt-token',
 };

@@ -38,6 +38,7 @@
     "@angular/platform-browser": "^10.1.0",
     "@angular/platform-browser-dynamic": "^10.1.0",
     "@angular/router": "^10.1.0",
+    "@auth0/angular-jwt": "^5.0.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@nebular/auth": "^6.2.1",
     "@nebular/eva-icons": "^6.2.1",
@@ -58,6 +59,8 @@
     "jquery": "^3.5.1",
     "nebular-icons": "^1.1.0",
     "pace-js": "1.0.2",
+    "primeicons": "^4.0.0",
+    "primeng": "^10.0.3",
     "rxjs": "~6.5.5",
     "socicon": "^3.0.5",
     "zone.js": "^0.10.2"

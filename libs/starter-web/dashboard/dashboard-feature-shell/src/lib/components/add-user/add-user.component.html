@@ -13,5 +13,81 @@
   </nb-card-header>
   <nb-card-body class="pb-5">
 
+
+
+
+      <div class="row my-3 p-fluid p-formgrid p-grid">
+        <div class="p-field col-md-6">
+          <label for="firstname">First Name</label>
+          <input pInputText id="firstname"  type="text">
+        </div>
+        <div class="p-field col-md-6">
+          <label for="lastname">Last Name</label>
+          <input pInputText id="lastname" name="lastname" type="text">
+        </div>
+      </div>
+
+      <div class="row my-3 p-fluid p-formgrid p-grid">
+        <div class="p-field col-md-6">
+          <label for="username">Username</label>
+          <input pInputText id="username" type="text">
+        </div>
+        <div class="p-field col-md-6">
+          <label for="email">Email</label>
+          <input pInputText id="email" type="text" >
+        </div>
+      </div>
+
+      <div class="row my-3 p-fluid p-formgrid p-grid">
+        <div class="p-field col-md-6">
+          <label for="phone">Mobile Number</label>
+          <input pInputText id="phone" type="text" placeholder="eg. '+263771234567'">
+        </div>
+        <div class="p-field col-md-6">
+          <label for="national-id">National ID</label>
+          <input pInputText id="national-id" type="text" placeholder="eg. '12-113456Z89'">
+        </div>
+      </div>
+
+      <div class="p-fluid">
+      <strong>Classification</strong>
+      <div class="row my-3 p-grid">
+        <div class="col-md-2">
+          <div class="p-field-radiobutton">
+            <p-radioButton  id="classification1" name="classification" [(ngModel)]="classification" value="Chicago"></p-radioButton>
+            <label for="classification1">Internal</label>
+          </div>
+        </div>
+        <div  class="col-md-2">
+          <div class="p-field-radiobutton">
+            <p-radioButton id="classification2" name="classification" [(ngModel)]="classification" value="external"></p-radioButton>
+            <label for="classification2">External</label>
+          </div>
+        </div>
+      </div>
+     </div>
+
+      <div class="p-fluid">
+        <label for="groups">User Group</label>
+      <p-multiSelect id="groups" [options]="groups" [(ngModel)]="selectedGroups" optionLabel="name" placeholder="- - select user groups - -"></p-multiSelect>
+    </div>
+
+    <button pButton type="button"
+    label="Back to list"
+    icon="pi pi-angle-double-left"
+    iconPos="left"
+    class="p-button-sm my-5"
+    style="background-color: #2E378B;"
+    [routerLink]="['/pages', 'dashboard']"></button>
+
+    <button pButton
+    type="button" label="Add User"
+    disabled
+    icon="pi pi-save" iconPos="left"
+    class="p-button-sm float-right my-5" style="background-color: #2E378B;"
+    [routerLink]="['/pages', 'dashboard', 'add']"></button>
+
+
+
   </nb-card-body>
 </nb-card>

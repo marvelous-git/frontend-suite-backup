@@ -24,6 +24,24 @@
       ],
       "@frontend-suite/starter-web/dashboard/dashboard-data-access": [
         "libs/starter-web/dashboard/dashboard-data-access/src/index.ts"
+      ],
+      "@frontend-suite/shared/util-auth": [
+        "libs/shared/util-auth/src/index.ts"
+      ],
+      "@frontend-suite/shared/data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
+      "@frontend-suite/shared/util-entities": [
+        "libs/shared/util-entities/src/index.ts"
+      ],
+      "@frontend-suite/starter-web/user-accounts/user-accounts-feature-shell": [
+        "libs/starter-web/user-accounts/user-accounts-feature-shell/src/index.ts"
+      ],
+      "@frontend-suite/starter-web/user-accounts/user-accounts-data-access": [
+        "libs/starter-web/user-accounts/user-accounts-data-access/src/index.ts"
+      ],
+      "@frontend-suite/starter-web/user-accounts/auth-feature-shell": [
+        "libs/starter-web/user-accounts/auth-feature-shell/src/index.ts"
       ]
     }
   },
